@@ -7,7 +7,7 @@ using System.Net;
 // A JSON file starts with either
 // - a square bracket, indicating a list,
 // - or a curly bracket, indicating a dictionary or object
-string json = @"{""key1"":""value1"",""key2"":""value2""}";
+string json = @"{""key1"":""value1"",""key2"":""value2""}";//,spilts
 
 // a curly bracket could just be a simple collection matching keys to values, both strings 
 IDictionary<string, string> values = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
@@ -36,11 +36,11 @@ string json2 = @"{
     'User',
     'Admin'
 ]
-}";
+}";//@ignores /n
 
 // if all the keys map to an object that already exists (note that these need to have public setters) 
 // this is safest when we control the JSON, so we are confident that it won't change 
-Account account = JsonConvert.DeserializeObject<Account>(json2);
+Account account = JsonConvert.DeserializeObject<Account>(json2);//
 
 Console.WriteLine(account.Email);
 
