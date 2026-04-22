@@ -110,7 +110,6 @@ void PressAKey()
     Console.WriteLine("\nPress a key");
     Console.Read();
 }
-
 public class Account
 {
     string _email;
